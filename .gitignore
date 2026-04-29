@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+coverage/
+.idea/
+.vscode/
+client/node_modules/
+client/dist/
+server/node_modules/
+ai-service/.pytest_cache/
+ai-service/.mypy_cache/
