@@ -1,4 +1,4 @@
-import { Bell, LogOut, Menu } from "lucide-react";
+import { Bell, LogOut } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import api from "../../api/axios";
@@ -14,7 +14,7 @@ const titles = {
   "/chatbot": "Chat Assistant",
 };
 
-const Topbar = ({ onToggleMobileMenu }) => {
+const Topbar = () => {
   const { pathname } = useLocation();
   const { user, logout } = useAuth();
   const [profileOpen, setProfileOpen] = useState(false);
@@ -112,23 +112,18 @@ const Topbar = ({ onToggleMobileMenu }) => {
 
   return (
     <>
-      <header className="card-surface sticky top-4 z-20 mb-6 flex items-center justify-between gap-4 px-5 py-4 text-white">
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={onToggleMobileMenu}
-            className="rounded-full border border-white/12 bg-white/6 p-3 text-white lg:hidden"
-          >
-            <Menu size={18} />
-          </button>
-          <div>
+      <header className="card-surface sticky top-4 z-20 mb-6 flex items-start justify-between gap-3 px-4 py-4 text-white sm:items-center sm:gap-4 sm:px-5">
+        <div className="min-w-0 flex flex-1 items-center gap-3">
+          <div className="min-w-0">
             <p className="kicker">Workspace</p>
-            <h2 className="mt-2 text-2xl font-semibold text-white">{titles[pathname] || "FinSight AI"}</h2>
+            <h2 className="mt-2 truncate text-xl font-semibold text-white sm:text-2xl">
+              {titles[pathname] || "FinSight AI"}
+            </h2>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div ref={notificationsRef} className="relative">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <div ref={notificationsRef} className="relative shrink-0">
             <button
               type="button"
               onClick={handleBellToggle}
@@ -179,9 +174,13 @@ const Topbar = ({ onToggleMobileMenu }) => {
             {initial}
           </button>
 
-          <button type="button" onClick={logout} className="secondary-button inline-flex items-center gap-2 !py-3 !text-white">
+          <button
+            type="button"
+            onClick={logout}
+            className="secondary-button inline-flex shrink-0 items-center gap-2 !px-3 !py-3 !text-white sm:!px-5"
+          >
             <LogOut size={16} />
-            Logout
+            <span className="max-[420px]:hidden">Logout</span>
           </button>
         </div>
       </header>

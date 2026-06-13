@@ -234,6 +234,23 @@ body::after {
   transform: translateY(-1px);
 }
 
+.mobile-nav-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+
+.mobile-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.notification-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%),
+    rgba(6, 8, 14, 0.94);
+  backdrop-filter: blur(26px);
+}
+
 .metric-chip {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
