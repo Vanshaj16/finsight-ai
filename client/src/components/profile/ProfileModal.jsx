@@ -61,11 +61,11 @@ const ProfileModal = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-hidden bg-black/65 px-3 py-4 backdrop-blur-sm sm:items-center sm:px-4 sm:py-6">
       <div className="card-surface profile-modal-scroll relative w-full max-w-lg overflow-y-auto text-white sm:max-w-2xl">
-        <div className="sticky top-0 z-10 -mx-5 -mt-5 mb-3 flex justify-end bg-[rgba(7,9,16,0.92)] px-5 pt-5 pb-2 backdrop-blur-xl sm:-mx-6 sm:-mt-6 sm:px-6 sm:pt-6 lg:-mx-7 lg:-mt-7 lg:px-7 lg:pt-7">
+        <div className="sticky top-3 z-10 mb-3 flex justify-end px-4 pt-4 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6">
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-white/10 bg-white/5 p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
+            className="rounded-full border border-white/10 bg-[rgba(7,9,16,0.78)] p-2 text-white/70 backdrop-blur-md transition hover:bg-white/10 hover:text-white"
           >
             <X size={18} />
           </button>
