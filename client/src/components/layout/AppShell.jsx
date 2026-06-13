@@ -13,6 +13,9 @@ const AppShell = () => {
           <main className="page-enter">
             <Outlet />
           </main>
+          <footer className="pt-10 text-center text-xs font-medium text-white/42">
+            © 2026 Vanshaj.co. All rights reserved.
+          </footer>
 
           <nav className="mobile-nav-scroll card-surface fixed inset-x-4 bottom-4 z-20 flex gap-2 overflow-x-auto p-2 text-white lg:hidden">
             {navigationItems.map(({ to, label, icon: Icon }) => (
@@ -37,4 +40,3 @@ const AppShell = () => {
 };
 
 export default AppShell;
-
