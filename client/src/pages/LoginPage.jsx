@@ -43,54 +43,54 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen px-4 py-6 lg:px-8">
-      <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-7xl items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <section className="card-surface relative overflow-hidden p-8 md:p-10">
+    <div className="min-h-screen overflow-x-clip px-3 py-4 sm:px-4 sm:py-6 lg:px-8">
+      <div className="mx-auto grid min-h-[calc(100vh-2rem)] max-w-7xl items-stretch gap-4 sm:gap-6 lg:min-h-[calc(100vh-3rem)] lg:grid-cols-[1.15fr_0.85fr]">
+        <section className="card-surface relative min-w-0 overflow-hidden p-5 sm:p-8 md:p-10">
           <div className="absolute inset-x-0 bottom-[-18%] h-[44%] rounded-full bg-white/10 blur-3xl" />
           <div className="relative z-10 flex h-full flex-col justify-between">
-            <div>
+            <div className="min-w-0">
               <div className="kicker">Way → Every Day</div>
-              <h1 className="hero-title mt-5 max-w-2xl text-[4.3rem] text-white sm:text-[5.8rem] lg:text-[7rem]">
+              <h1 className="hero-title mt-4 max-w-full text-[3rem] leading-[0.9] text-white sm:mt-5 sm:max-w-2xl sm:text-[5rem] lg:text-[7rem]">
                 Spend wisely & effortlessly
               </h1>
-              <p className="mt-4 max-w-xl text-base leading-8 text-white/62 md:text-lg">
+              <p className="mt-4 max-w-xl text-sm leading-7 text-white/62 sm:text-base md:text-lg">
                 FinSight AI turns your transaction stream into a premium daily finance ritual with AI-led insights, budgets, and assistant guidance.
               </p>
             </div>
 
-            <div className="mt-10 grid items-end gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="space-y-4">
-                <div className="metric-chip inline-flex items-center gap-3">
+            <div className="mt-8 grid min-w-0 items-end gap-6 sm:mt-10 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="min-w-0 space-y-3 sm:space-y-4">
+                <div className="metric-chip flex w-full items-center gap-3 sm:inline-flex sm:w-auto">
                   <Sparkles size={16} />
                   AI categorization and forecasting
                 </div>
-                <div className="metric-chip inline-flex items-center gap-3">
+                <div className="metric-chip flex w-full items-center gap-3 sm:inline-flex sm:w-auto">
                   <ShieldCheck size={16} />
                   Secure JWT and Google OAuth flows
                 </div>
-                <div className="metric-chip inline-flex items-center gap-3">
+                <div className="metric-chip flex w-full items-center gap-3 sm:inline-flex sm:w-auto">
                   <ArrowRight size={16} />
                   Smooth budgeting and chat assistance
                 </div>
               </div>
 
-              <div className="float-card mx-auto w-full max-w-[370px]">
-                <div className="device-shell p-4 pt-10">
-                  <div className="rounded-[34px] bg-black px-5 pb-5 pt-6 text-center text-white">
-                    <div className="mx-auto h-48 w-48 orb-ring" />
+              <div className="float-card mx-auto w-full max-w-[340px] sm:max-w-[370px]">
+                <div className="device-shell p-3 pt-9 sm:p-4 sm:pt-10">
+                  <div className="rounded-[30px] bg-black px-4 pb-4 pt-5 text-center text-white sm:rounded-[34px] sm:px-5 sm:pb-5 sm:pt-6">
+                    <div className="mx-auto h-40 w-40 orb-ring sm:h-48 sm:w-48" />
                     <div className="mt-6">
-                      <p className="hero-title text-5xl text-white">Spend wisely</p>
-                      <p className="hero-title -mt-1 text-5xl text-white/94">& effortlessly</p>
+                      <p className="hero-title text-[2.6rem] text-white sm:text-5xl">Spend wisely</p>
+                      <p className="hero-title -mt-1 text-[2.6rem] text-white/94 sm:text-5xl">& effortlessly</p>
                     </div>
                   </div>
-                  <div className="ticket-surface mt-4 px-5 py-4">
-                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7b8295]">FinSight onboarding</p>
-                    <div className="mt-3 flex items-center justify-between">
-                      <div>
-                        <p className="text-xl font-semibold text-[#0B1020]">Premium finance flow</p>
+                  <div className="ticket-surface mt-4 px-4 py-4 sm:px-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7b8295] sm:text-sm sm:tracking-[0.24em]">FinSight onboarding</p>
+                    <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="min-w-0">
+                        <p className="text-lg font-semibold text-[#0B1020] sm:text-xl">Premium finance flow</p>
                         <p className="mt-1 text-sm text-[#656d82]">Enter, analyze, improve.</p>
                       </div>
-                      <button className="rounded-full bg-[#5C63FF] px-4 py-2 text-sm font-semibold text-white">Get started</button>
+                      <button className="w-full rounded-full bg-[#5C63FF] px-4 py-2 text-sm font-semibold text-white sm:w-auto">Get started</button>
                     </div>
                   </div>
                 </div>
@@ -99,8 +99,8 @@ const LoginPage = () => {
           </div>
         </section>
 
-        <section className="card-surface flex items-center p-6 text-white md:p-8">
-          <div className="w-full">
+        <section className="card-surface flex min-w-0 items-center p-5 text-white sm:p-6 md:p-8">
+          <div className="w-full min-w-0">
             <div className="mb-6 flex rounded-full border border-white/8 bg-white/4 p-1 text-sm font-semibold text-white/55">
               <button
                 type="button"
@@ -119,7 +119,7 @@ const LoginPage = () => {
             </div>
 
             <p className="kicker">Account access</p>
-            <h2 className="mt-3 text-4xl font-semibold text-white">
+            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
               {mode === "login" ? "Welcome back" : "Create your account"}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/54">
